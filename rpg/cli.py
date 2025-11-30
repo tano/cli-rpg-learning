@@ -19,7 +19,7 @@ def display_welcome():
     print("=" * 50)
     print("Welcome to CLI RPG!")
     print("=" * 50)
-    print(f"\nAvailable hero types: {', '.join(ALLOWED_HERO_TYPES)}")
+    print(f"\nAvailable hero types: {', '.join(ALLOWED_HERO_TYPES)}")  # Tuple is iterable like a list
     print("\nYour quest begins...\n")
 
 
