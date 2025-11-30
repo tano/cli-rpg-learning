@@ -29,6 +29,7 @@ def test_party_too_small_raises():
 
 def test_party_too_big_raises():
     """A party with more than MAX_PARTY_SIZE heroes should raise ValueError."""
+    # 5 heroes exceeds MAX_PARTY_SIZE (4)
     hero_types = ["warrior", "mage", "rogue", "warrior", "mage"]
     with pytest.raises(ValueError):
         create_party(hero_types)
