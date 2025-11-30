@@ -43,6 +43,6 @@ def test_unknown_hero_type_raises():
 
 def test_too_many_same_type_raises():
     """A party with too many heroes of the same type should raise ValueError."""
-    hero_types = ["warrior", "warrior", "warrior"]
+    hero_types = ["warrior", "warrior", "warrior"]  # 3 warriors exceeds MAX_PER_TYPE (2)
     with pytest.raises(ValueError):
         create_party(hero_types)
