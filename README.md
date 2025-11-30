@@ -111,11 +111,79 @@ docs: update setup instructions
 
 ---
 
+## 🛠️ Setup
+
+### 1. Create virtual environment
+
+```bash
+python3 -m venv venv
+```
+
+### 2. Activate virtual environment
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🎯 Current Feature: Party Creation
+
+The current task is to implement **party creation and validation** logic.
+
+### Party Rules
+
+- **Allowed hero types**: `warrior`, `mage`, `rogue`
+- **Party size**: 1-4 heroes
+- **Type limit**: Maximum 2 heroes of the same type
+
+### Implementation Task
+
+The module `rpg/party.py` contains:
+- Constants: `ALLOWED_HERO_TYPES`, `MIN_PARTY_SIZE`, `MAX_PARTY_SIZE`, `MAX_PER_TYPE`
+- Function stubs: `validate_party()` and `create_party()`
+
+**Your task**: Implement these functions to make all tests in `tests/test_party.py` pass.
+
+### Test-Driven Development
+
+Run the tests to see what needs to be implemented:
+
+```bash
+pytest tests/test_party.py -v
+```
+
+All tests will **fail** initially because the functions raise `NotImplementedError`. Your goal is to implement the logic so all tests pass.
+
+---
+
+## 📁 Project structure
+
+```
+cli-rpg-learning/
+├── rpg/
+│   ├── __init__.py
+│   ├── cli.py         # Entry point
+│   └── party.py       # Party creation and validation
+└── tests/
+    └── test_party.py
+```
+
+**Note**: Additional modules (player, enemy, world, combat, io) will be added in future iterations.
+
+---
+
 ## 🧪 Testing
 
 Run tests:
 
-```
+```bash
 pytest -v
 ```
 
@@ -125,7 +193,7 @@ pytest -v
 
 Launch the game:
 
-```
+```bash
 python -m rpg.cli
 ```
 
