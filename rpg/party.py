@@ -1,6 +1,7 @@
 """Party creation and validation for RPG heroes."""
 
-# Allowed hero types
+# Hero types available for party composition.
+# Each type represents a class with unique abilities in the RPG (e.g., "warrior" is strong in melee combat, "mage" uses magic, "rogue" excels at stealth).
 ALLOWED_HERO_TYPES = ("warrior", "mage", "rogue")
 
 # Party size constraints
